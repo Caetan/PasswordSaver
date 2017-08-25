@@ -145,15 +145,27 @@ public class PanelInicial extends JPanel {
 	
 
 	private void guardarDatos(String nombre, String descripcion, String contrasena) {
-        try { 
-            FileWriter bw;//Instancia de BW 
-            bw = new FileWriter(fichero,true);//Inicialización de "BW" con "FW" como parámetro con "fichero" como parámetro
-            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCIÓN: "+ descripcion + "-,-" + "3. CONTRASEÑA: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
-            //y entre ello agregamos una coma ("-,-"). 
-            bw.close();//Cerramos para guardar los datos en el fichero 
-        } catch (IOException ex) { 
-            System.out.print("No se pudieron guardar los datos!n" + ex.getMessage()); 
-        } 
+		if (fichero.exists()) {
+	        try { 
+	            FileWriter bw;//Instancia de BW 
+	            bw = new FileWriter(fichero,true);//Inicialización de "BW" con "FW" como parámetro con "fichero" como parámetro
+	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCIÓN: "+ descripcion + "-,-" + "3. CONTRASEÑA: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
+	            //y entre ello agregamos una coma ("-,-"). 
+	            bw.close();//Cerramos para guardar los datos en el fichero 
+	        } catch (IOException ex) { 
+	            System.out.print("No se pudieron guardar los datos!n" + ex.getMessage()); 
+	        } 
+		} else {
+			try { 
+	            FileWriter bw;//Instancia de BW 
+	            bw = new FileWriter(fichero,true);//Inicialización de "BW" con "FW" como parámetro con "fichero" como parámetro
+	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCIÓN: "+ descripcion + "-,-" + "3. CONTRASEÑA: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
+	            //y entre ello agregamos una coma ("-,-"). 
+	            bw.close();//Cerramos para guardar los datos en el fichero 
+	        } catch (IOException ex) { 
+	            System.out.print("No se pudieron guardar los datos!n" + ex.getMessage()); 
+	        }
+		}
 	}
 	
 	
