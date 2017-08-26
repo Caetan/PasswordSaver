@@ -1,4 +1,4 @@
-[Título] \n
+[Título]
 Password Saver
 
 [Descripción del proyecto]
