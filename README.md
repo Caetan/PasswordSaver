@@ -8,7 +8,6 @@ Descargar proyecto y generar un .jar
 
 Requisitos: JAVA
 Versión: 0.x
-Encargados del proyecto: Caetán Tojeiro Carpente
 
 No disponible documentación
 
