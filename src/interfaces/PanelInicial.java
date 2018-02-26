@@ -1,3 +1,22 @@
+/**********************************************************************/
+
+Copyright (C) 2017  Caetán Tojeiro Carpente
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/agpl-3.0.html>
+
+/**********************************************************************/
+
 package interfaces;
 
 import javax.swing.JPanel;
@@ -86,7 +105,7 @@ public class PanelInicial extends JPanel {
 		btnVerContrasenas = new JButton("VER CONTRASENAS");
 		btnVerContrasenas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//Ver contrase�as
+				//Ver contraseñas
 				leerDatos();
 			//	mostrarDatos();
 				abrirFichero();
@@ -148,8 +167,8 @@ public class PanelInicial extends JPanel {
 		if (fichero.exists()) {
 	        try { 
 	            FileWriter bw;//Instancia de BW 
-	            bw = new FileWriter(fichero,true);//Inicializaci�n de "BW" con "FW" como par�metro con "fichero" como par�metro
-	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCI�N: "+ descripcion + "-,-" + "3. CONTRASE�A: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
+	            bw = new FileWriter(fichero,true);//Inicialización de "BW" con "FW" como parámetro con "fichero" como parámetro
+	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCIÓN: "+ descripcion + "-,-" + "3. CONTRASEÑA: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
 	            //y entre ello agregamos una coma ("-,-"). 
 	            bw.close();//Cerramos para guardar los datos en el fichero 
 	        } catch (IOException ex) { 
@@ -158,8 +177,8 @@ public class PanelInicial extends JPanel {
 		} else {
 			try { 
 	            FileWriter bw;//Instancia de BW 
-	            bw = new FileWriter(fichero,true);//Inicializaci�n de "BW" con "FW" como par�metro con "fichero" como par�metro
-	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCI�N: "+ descripcion + "-,-" + "3. CONTRASE�A: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
+	            bw = new FileWriter(fichero,true);//Inicialización de "BW" con "FW" como parámetro con "fichero" como parámetro
+	            bw.write("-- 1. NOMBRE: " + nombre + "-,-" + "2. DESCRIPCIÓN: "+ descripcion + "-,-" + "3. CONTRASEÑA: " + contrasena + "\r\n");//Escribimos lo que haya en los TextFields
 	            //y entre ello agregamos una coma ("-,-"). 
 	            bw.close();//Cerramos para guardar los datos en el fichero 
 	        } catch (IOException ex) { 
